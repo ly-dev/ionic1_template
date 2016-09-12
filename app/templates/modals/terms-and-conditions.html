@@ -1,0 +1,18 @@
+<ion-modal-view class="terms-and-condition-modal">
+    <ion-header-bar align-title="center">
+        <h1 class="title">&nbsp;</h1>
+        <button class="button button-clear" ng-click="process('hide-term')"><i class="mi mi-circle-close"></i></button>
+    </ion-header-bar>
+    <ion-content class="has-header">
+        <div style="margin-top: 0em" class="row">
+            <div class="col helper-text-center">
+                <h1>Terms and Conditions</h1>
+            </div>
+        </div>
+        <div style="margin-top: 1em" class="row">
+            <div class="col">
+                <div ng-bind-html="pages['terms-and-conditions']"></div>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

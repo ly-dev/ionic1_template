@@ -1,0 +1,80 @@
+/* basic element */
+
+/* helper text */
+.helper-text-vtop {
+    vertical-align: top;
+}
+.helper-text-vmiddle {
+    vertical-align: middle;
+}
+.helper-text-vbaseline {
+    vertical-align: baseline;
+}
+.helper-text-vbottom {
+    vertical-align: bottom;
+}
+.helper-text-center {
+    text-align: center;
+}
+.helper-text-left {
+    text-align: left;
+}
+.helper-text-right {
+    text-align: right;
+}
+.helper-text-2x {
+    font-size: 2em;
+}
+.helper-text-3x {
+    font-size: 3em;
+}
+.helper-text-4x {
+    font-size: 4em;
+}
+// helper row
+.helper-row-buttons {
+    .col-50 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+/* icons */
+.mi {
+    display: inline-block;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    &.mi-logo {
+        width: 100%;
+        background-image: url("../images/logo.svg");
+    }
+}
+.item-icon-left,
+.item-icon-right {
+    .mi {
+        @include display-flex();
+        @include align-items(center);
+        position: absolute;
+        top: 0;
+        height: 100%;
+        font-size: 1em;
+        &:before {
+            display: block;
+            width: 1em;
+            text-align: center;
+        }
+    }
+}
+.item-icon-left {
+    .mi {
+        left: ceil( ($item-padding / 3) * 2);
+    }
+}
+.item-icon-right {
+    .mi {
+        right: ceil( ($item-padding / 3) * 2);
+    }
+}

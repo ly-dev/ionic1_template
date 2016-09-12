@@ -1,0 +1,26 @@
+/************************************
+ *
+ *  Main Styles to compile. Here only @imports!
+ *
+ ************************************/
+@import "_fonts";
+@import "_variables";
+/**
+ * Include all of Ionic variables and mixins
+ */
+@import 'bower_components/ionic/scss/_variables';
+@import 'bower_components/ionic/scss/_mixins';
+/**
+ * Fix vendor Css
+ */
+@import "_vendor_fix";
+/**
+ * LAYOUT and Global Css
+ */
+@import "_layout";
+
+/**
+ * VIEWS specific Css
+ */
+@import "views/home";
+@import "views/login";

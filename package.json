@@ -1,0 +1,93 @@
+{
+    "name": "ticketscanner",
+    "version": "1.0.0",
+    "author": "Yong Li <yong@global-initiative.com>",
+    "description": "",
+    "dependencies": {},
+    "devDependencies": {
+        "beepbeep": "^1.2.0",
+        "connect-livereload": "^0.5.2",
+        "del": "^2.2.0",
+        "express": "^4.11.1",
+        "express-http-proxy": "^0.7.4",
+        "glob": "^4.3.5",
+        "gulp": "^3.8.10",
+        "gulp-angular-templatecache": "^1.8.0",
+        "gulp-autoprefixer": "^3.1.0",
+        "gulp-cached": "^1.1.0",
+        "gulp-changed": "^1.3.0",
+        "gulp-concat": "^2.6.0",
+        "gulp-iconfont": "^5.0.1",
+        "gulp-iconfont-css": "2.0.0",
+        "gulp-if": "^2.0.0",
+        "gulp-inject": "^3.0.0",
+        "gulp-jshint": "^2.0.0",
+        "gulp-livereload": "^3.8.1",
+        "gulp-load-plugins": "^1.1.0",
+        "gulp-ng-annotate": "^1.1.0",
+        "gulp-remember": "^0.3.0",
+        "gulp-replace": "^0.5.4",
+        "gulp-rev": "^6.0.0",
+        "gulp-sass": "^2.1.1",
+        "gulp-shell": "^0.5.1",
+        "gulp-strip-css-comments": "^1.2.0",
+        "gulp-strip-debug": "^1.1.0",
+        "gulp-uglify": "^1.5.1",
+        "gulp-util": "^3.0.0",
+        "http-proxy-middleware": "^0.17.0",
+        "jshint": "2.9.1",
+        "jshint-stylish": "^2.1.0",
+        "lodash": "^3.10.1",
+        "lodash._basecopy": "latest",
+        "merge-stream": "^1.0.0",
+        "node-sass": "^3.4.2",
+        "open": "0.0.5",
+        "ripple-emulator": "^0.9.32",
+        "run-sequence": "^1.1.5",
+        "shelljs": "^0.5.3",
+        "streamqueue": "^1.1.1",
+        "wiredep": "^3.0.0",
+        "yargs": "^3.31.0"
+    },
+    "scripts": {
+        "gulp": "./node_modules/.bin/gulp"
+    },
+    "cordovaPlugins": [
+        "cordova-plugin-device",
+        "cordova-plugin-console",
+        "cordova-plugin-whitelist",
+        "cordova-plugin-splashscreen",
+        "cordova-plugin-statusbar",
+        "ionic-plugin-keyboard",
+        "cordova-plugin-inappbrowser",
+        "phonegap-plugin-push",
+        "cordova-plugin-network-information"
+    ],
+    "cordovaPlatforms": [
+        "ios",
+        "android"
+    ],
+    "projectConfig": {
+        "replaceConfig": {
+            "dev": {
+                "DEBUG: true": "DEBUG: true",
+                "APP_VERSION: 'x.x.x'": "APP_VERSION: '1.0.x-dev'",
+                "API_SERVER_URL: 'http://lyionic:8100'": "API_SERVER_URL: 'http://sbsam.global-initiative.com/ticketscanner'"
+            },
+            "stage": {
+                "DEBUG: true": "DEBUG: true",
+                "APP_VERSION: 'x.x.x'": "APP_VERSION: '1.0.x-stage'",
+                "API_SERVER_URL: 'http://lyionic:8100'": "API_SERVER_URL: 'http://www.ticketscanner.thisisatestingserver.com'"
+            },
+            "rel": {
+                "DEBUG: true": "DEBUG: false",
+                "APP_VERSION: 'x.x.x'": "APP_VERSION: '1.0.x-rel'",
+                "API_SERVER_URL: 'http://lyionic:8100'": "API_SERVER_URL: 'http://www.ticketscanner.thisisatestingserver.com'"
+            }
+        },
+        "proxies": [{
+            "path": "/api/v1",
+            "proxyUrl": "http://sbsam.global-initiative.com/ticketscanner"
+        }]
+    }
+}

@@ -1,0 +1,7 @@
+<ion-nav-view></ion-nav-view>
+<div class="notification-backdrop active" ng-class="{'hide': !appNotification.active, 'active': appNotification.active}" ng-click="hideAppNotification()">
+    <div class="notification helper-text-center">
+        <h2 ng-bind-html="appNotification.title"></h2>
+        <p ng-bind-html="appNotification.content"></p>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<ion-view view-title="Login" class="login-page">
+    <ion-content>
+        <div style="margin-top: 3em; height: 6em;" class="row">
+            <div class="col"></div>
+            <div class="col mi mi-logo"></div>
+            <div class="col"></div>
+        </div>
+        <div style="margin-top: 1.5em" class="row">
+            <div class="col helper-text-center">
+                <h1>Login</h1>
+                <p>Please use your email</p>
+            </div>
+        </div>
+        <div style="margin-top: 0" class="list list-inset">
+            <label class="item item-input">
+                <input id="login-email" type="text" placeholder="Email" ng-model="formData.email" autocomplete="emailAutocomplete">
+            </label>
+            <label class="item item-input">
+                <input type="password" placeholder="Password" ng-model="formData.password">
+            </label>
+        </div>
+        <div style="margin-top: 0em" class="row helper-row-buttons">
+            <div class="col-50">
+                <button type="button" class="button button-block button-stable" ng-click="process('reset-password')">Reset Password</button>
+            </div>
+            <div class="col-50">
+                <button type="button" class="button button-block button-positive" ng-click="process('login')">Login</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
